@@ -1,0 +1,13 @@
+<div class="mw6 w-60-l w-80 center roboto pa2 mt4">
+    <spinner [showSpinner]="showSpinner"></spinner>
+    <div class="pb3">
+        <!--h2 class="fw7 playfair lh-title black-70 f2 f1-ns">Classes & Pricing</h2-->
+        <ng-container *ngFor="let cls of classes">
+            <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ cls.title.rendered }}
+            </h2>
+            <p class="fw7">{{ cls.price }}</p>
+            <div [innerHTML]=" cls?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
+            </div>
+        </ng-container>
+    </div>
+</div>

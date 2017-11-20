@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .nploTeal {
+    color: rgb(4, 132, 155);
+    /*#31849B*/
+  }
+  
+  .bg-nploTeal {
+    background: rgb(4, 132, 155);
+  }
+  
+  .nploLtBlue {
+    color: rgb(142, 183, 210);
+  }
+  
+  .bg-nploLtBlue {
+    background: rgb(142, 183, 210);
+  }
+  
+  .nploBrown {
+    color: rgb(145, 129, 118);
+  }
+  
+  .bg-nploBrown {
+    background: rgb(145, 129, 118);
+  }
+  
+  .raleway {
+      font-family: "Raleway", sans-serif;
+  }
+
+  .playfair {
+      font-family: "Playfair Display", serif;
+  }
+  
+  .inconsolata {
+      font-family: "Inconsolata", monospace;
+  }
+
+  .roboto {
+      font-family: "Roboto", sans-serif;
+  }
+  
+  .scriptoramaJf {
+    font-family: "ScriptoramaJFHostess";
+  }
+  
+  @font-face {
+    font-family: "ScriptoramaJFHostess";
+    src: url("assets/Scriptorama Hostess JF Regular.ttf");
+  }
+
+  .shadow-box-black {
+    box-shadow: 5px 5px 0px 0px #000;
+  }
+
+  .squiggle-line-black {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg id='underline-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%23000' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-size: auto 3px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+  }
+
+  .squiggle-line-teal {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg id='underline-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='%2331849B' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-size: auto 3px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+  }

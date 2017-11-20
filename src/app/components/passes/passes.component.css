@@ -1,0 +1,13 @@
+button {
+    border: solid rgb(4, 132, 155);;
+    cursor: pointer;
+    transition: all 0.33333s ease-in-out;
+    display: -webkit-box;
+}
+
+button:focus,
+button:hover {
+    background: #fff;
+    color: rgb(4, 132, 155);
+    border: solid rgb(4, 132, 155);;
+}

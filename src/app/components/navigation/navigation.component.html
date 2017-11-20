@@ -1,0 +1,32 @@
+<div class="w-100">
+    <nav class="w-100 tracked tr roboto bg-near-white">
+        <div class="pr3 bg-nploTeal nav-social">
+            <p class="di near-white">
+                10 E Main Street Waynesboro, PA 17268 - 717-576-6466
+            </p>
+            <ul>
+                <li class="pa1 di">
+                    <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline near-white">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="pa1 di">
+                    <a href="https://www.facebook.com/noplacelikeompa/" target="_blank" class="no-underline near-white">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="pa1 di">
+                    <a href="https://www.instagram.com/zen_yama_mama/" target="_blank" class="no-underline near-white">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--a routerLink="about" class="fl link tracked-tight nploTeal playfair f4 f3-ns pa2" id="logo">NPLO</a-->
+        <ul class="list" id="main-nav">
+            <li *ngFor="let p of pages">
+                <a *ngIf="p.slug != 'welcome'" routerLink="{{ p.slug }}" id="{{ p.id }}" class="f5 tracked link mid-gray pr3">{{ p.slug }}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
