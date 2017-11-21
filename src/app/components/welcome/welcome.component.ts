@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { PageService } from '../../services/page.service';
-
-import { Page } from '../../models/page.model';
+import { PostsService } from '../../services/posts.service';
+import { CategoriesService } from '../../services/categories.service';
+import { SpinnerComponent } from '../spinner/spinner.component';
+import { Category } from '../../models/category.model';
+import { Post } from '../../models/post.model';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import { error } from 'util';
 
 @Component({
     selector: 'welcome',
@@ -10,18 +16,23 @@ import { Page } from '../../models/page.model';
 })
 
 export class WelcomeComponent implements OnInit { 
-    // the query parameters from wp rest api always return an array of objects even if only one result is found
-    // so this has to be an array - which means we have to iterate in the template - ugh
-    pages: Page[];
+    posts: Post[];
+    showSpinner: boolean = true;
     
-    constructor (private pageService: PageService) {
-        
-    }
+    constructor (private postsService: PostsService, private categoriesService: CategoriesService) { }
 
-    ngOnInit () {
-        let slug = 'welcome';
-        
-        this.pageService.getPageBySlug(slug)
-            .subscribe(data => this.pages = data, error => console.log(error));
+    ngOnInit () {        
+        this.postsService.get()
+            .subscribe(
+                data => { 
+                    this.posts = data;
+                    this.posts.map(post => {
+                        post.categoryNames = this.categoriesService.getCategoryNames(post.categories);
+                    });
+                    
+                    this.showSpinner = false;
+                },
+                error => console.log(error)
+            );
     }
 }

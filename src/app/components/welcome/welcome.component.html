@@ -1,7 +1,16 @@
-<div class="mw6 w-60-l w-80 center roboto pa2 mt4 pt6">
-    <ng-container *ngFor="let page of pages">
-        <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ page?.title.rendered }}</h2>
-        <div [innerHTML]=" page?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
+<div class="mw6 w-60-l w-80 center roboto pa2 mt4">
+    <spinner [showSpinner]="showSpinner"></spinner>
+    <ng-container *ngFor="let post of posts">
+        <div>
+            <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ post?.title.rendered }}</h2>
+            <p class="f7 mid-gray roboto">{{ post?.date | date:'medium'}}</p>
+            <div [innerHTML]="post?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
+            </div>
+            <div class="f7 mid-gray roboto i">
+                <ng-container *ngFor="let name of post.categoryNames">
+                    <p>{{ name?.name }}</p>
+                </ng-container>
+            </div>
         </div>
     </ng-container>
 </div>

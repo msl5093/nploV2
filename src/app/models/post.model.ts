@@ -1,4 +1,6 @@
-export interface Page {
+import { Category } from "./category.model";
+
+export interface Post {
     id: string | number,
     title: {
         rendered: string
@@ -7,5 +9,6 @@ export interface Page {
         rendered: string
     },
     slug: string,
-    date: string
+    categories: number[],
+    categoryNames: Category[]
 }

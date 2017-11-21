@@ -9,7 +9,7 @@ import { PassesComponent } from './components/passes/passes.component';
 import { FaqComponent } from './components/faq/faq.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/about', pathMatch: 'full' },
+    { path: '', redirectTo: '/welcome', pathMatch: 'full' },
     { path: 'welcome', component: WelcomeComponent },
     { path: 'schedule', component: ScheduleComponent },
     { path: 'about', component: AboutComponent },

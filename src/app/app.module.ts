@@ -21,6 +21,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PageService } from './services/page.service';
 import { ClassesService } from './services/classes.service';
 import { PassesService } from './services/passes.service';
+import { PostsService } from './services/posts.service';
+import { CategoriesService } from './services/categories.service';
 
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
@@ -49,7 +51,9 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
   providers: [
     PageService,
     ClassesService,
-    PassesService
+    PassesService,
+    PostsService,
+    CategoriesService
   ],
   bootstrap: [ AppComponent ]
 })

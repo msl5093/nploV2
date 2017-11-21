@@ -1,13 +1,15 @@
-<div class="mw6 w-60-l w-80 center roboto pa2 mt4 pt6">
+<div class="mw6 w-60-l w-80 center roboto pa2 mt4">
     <spinner [showSpinner]="showSpinner"></spinner>
     <div class="pb3">
         <!--h2 class="fw7 playfair lh-title black-70 f2 f1-ns">Class Passes</h2-->
         <ng-container *ngFor="let pass of passes">
-            <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ pass.title.rendered }}</h2>
-            <p class="fw7">{{ pass.price }}</p>
-            <div [innerHTML]=" pass?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
+            <div class="">
+                <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ pass.title.rendered }}</h2>
+                <p class="fw7">{{ pass.price }}</p>
+                <div [innerHTML]=" pass?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
+                </div>
+                <button (click)="itemClick(pass.link)" class="bg-nploTeal white playfair f3-ns f4">Purchase</button>
             </div>
-            <button (click)="itemClick(pass.link)" class="bg-nploTeal white playfair f3-ns f4">Purchase</button>
         </ng-container>
     </div>
 </div>
