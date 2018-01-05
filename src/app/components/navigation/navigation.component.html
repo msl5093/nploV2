@@ -21,8 +21,11 @@
                     </a>
                 </li>
             </ul>
+            <div>
+                <a routerLink="faq" class="near-white pl2 pb2 tl f5 tracked mid-gray">SIGNUP & CANCELLATION POLICIES</a>
+            </div>
         </div>
-        <a routerLink="welcome" class="fl link tracked-tight nploTeal playfair f4 f3-ns pa2" id="logo">Home</a>
+        <a routerLink="welcome" class="fl link tracked-tight nploTeal playfair f4 f3-ns pa2" id="logo">Welcome</a>
         <ul class="list" id="main-nav">
             <li *ngFor="let p of pages">
                 <a *ngIf="p.slug != 'welcome'" routerLink="{{ p.slug }}" id="{{ p.id }}" class="f5 tracked link mid-gray pr3">{{ p.slug }}</a>

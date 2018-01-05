@@ -1,4 +1,4 @@
-header {
+/*header {
     margin-top: 4em;
     background-image: url('https://www.noplacelikeom-pa.com/wp-content/uploads/2017/10/logo.jpg');
     background-size: 100%;
@@ -6,7 +6,7 @@ header {
     padding-top: 66.666666666667%;
     height: 0;
     box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-}
+}*/
 
 /* Larger than mobile screen */
 @media (min-width: 40.0rem) {  

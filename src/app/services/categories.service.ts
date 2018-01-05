@@ -21,7 +21,6 @@ export class CategoriesService extends DataService<Category> {
         let categories = new Array<Category>();
         
         ids.map(id => {
-            // find a way to not mutate state??? does that matter???
             this.getById(id)
                 .subscribe(data => categories.push(data), error => console.log(error));
         });
