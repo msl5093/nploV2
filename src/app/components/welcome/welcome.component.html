@@ -1,16 +1,34 @@
-<div class="mw6 w-60-l w-80 center roboto pa2 pt6 mt4">
+<div class="mw6 w-60-l w-80 center mt4 pa2 mb4 bg-white">
+    <p class="f4-ns f5 lh-copy raleway">
+        <strong class="playfair f3-ns f4">No Place Like Om</strong> is a yoga studio and meditation center offering various types of mat yoga for students of all levels regardless of age, skill level, or body type. Whether you are a beginner or a seasoned yogi, all classes are taught in layers that allow students of all levels to practice together at their own pace.
+    </p>
+    <p class="f4-ns f5 lh-copy raleway">
+        At <strong class="playfair f3-ns f4">No Place Like Om</strong>, we seek to promote the wellness of students and clients through a holistic approach, strengthening the body and mind. You won’t ever feel intimidated or left behind, but you will feel challenged, relaxed, and respected as you invite us to share in your practice and lifelong journey through yoga.
+    </p>
+    <br />
+    <div class="pa4 outline shadow-box-black">
+        <h2 class="raleway">
+            You hope you enjoy your time with us and please don't hesitate to contact us with any 
+            <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline squiggle-line-teal nploTeal">questions</a>.
+        </h2>
+    </div>
+</div>
+
+<div class="mw6 w-60-l w-80 center pt4 bg-white">
     <spinner [showSpinner]="showSpinner"></spinner>
     <ng-container *ngFor="let post of posts">
-        <div>
-            <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ post?.title.rendered }}</h2>
-            <p class="f7 mid-gray roboto">{{ post?.date | date:'medium'}}</p>
-            <div [innerHTML]="post?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
-            </div>
-            <div class="f7 mid-gray roboto i">
+        <div class="shadow-box-black blogroll">
+            <img [src]=post.imageUrl [alt]="image" [title]="image" />
+            <h2 class="f2-ns f3 playfair nploTeal fw7 tracked-tight ma0 ph2">{{ post?.title.rendered }}</h2>
+            <p class="f7 mid-gray inconsolata ph2">{{ post?.date | date:'medium'}}</p>
+            <div class="f7 mid-gray raleway i ph2">
                 <ng-container *ngFor="let name of post.categoryNames">
-                    <p>{{ name?.name }}</p>
+                    <p class="dib ma0">#{{ name?.name }}</p>
                 </ng-container>
             </div>
+            <div [innerHTML]="post?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy raleway ph2">
+            </div>
         </div>
+        <br />
     </ng-container>
 </div>

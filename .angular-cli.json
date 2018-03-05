@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/tachyons/css/tachyons.min.css"
+        "../node_modules/tachyons/css/tachyons.min.css",
+        "../node_modules/hamburgers/dist/hamburgers.min.css"
       ],
       "scripts": [
         

@@ -1,35 +1,41 @@
 <div class="w-100">
-    <nav class="w-100 tracked tr roboto bg-near-white">
-        <div class="pr3 bg-nploTeal nav-social">
-            <p class="di near-white">
-                10 E Main Street Waynesboro, PA 17268 - 717-576-6466
+    <nav class="w-100 tracked tr raleway bg-near-white">
+        <div id="top-nav-container">
+            <button class="hamburger hamburger--collapse fl link f4 f3-ns" type="button" id="menu-toggle" (click)="toggle()" [ngClass]="{'is-active': isMenuExpanded}">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <p class="di mid-gray" id="address">
+                8 E Main Street Waynesboro, PA 17268 - 717-576-6466
             </p>
-            <ul>
+            <ul id="social-nav">
                 <li class="pa1 di">
-                    <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline near-white">
+                    <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline mid-gray">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="pa1 di">
-                    <a href="https://www.facebook.com/noplacelikeompa/" target="_blank" class="no-underline near-white">
+                    <a href="https://www.facebook.com/noplacelikeompa/" target="_blank" class="no-underline mid-gray">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="pa1 di">
-                    <a href="https://www.instagram.com/zen_yama_mama/" target="_blank" class="no-underline near-white">
+                    <a href="https://www.instagram.com/zen_yama_mama/" target="_blank" class="no-underline mid-gray">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>
-            <div>
-                <a routerLink="faq" class="near-white pl2 pb2 tl f5 tracked mid-gray">SIGNUP & CANCELLATION POLICIES</a>
-            </div>
         </div>
-        <a routerLink="welcome" class="fl link tracked-tight nploTeal playfair f4 f3-ns pa2" id="logo">Welcome</a>
-        <ul class="list" id="main-nav">
-            <li *ngFor="let p of pages">
-                <a *ngIf="p.slug != 'welcome'" routerLink="{{ p.slug }}" id="{{ p.id }}" class="f5 tracked link mid-gray pr3">{{ p.slug }}</a>
-            </li>
-        </ul>
+        <div id="main-nav-container" class="ttu raleway w-100" *ngIf="isMenuExpanded">
+            <ul class="list" id="main-nav">
+                <li>
+                    <a routerLink="/welcome" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">Home</a>
+                </li>
+                <li *ngFor="let p of pages">
+                    <a *ngIf="p.slug != 'welcome'" routerLink="{{ p.slug }}" routerLinkActive="active-link" id="{{ p.id }}" class="f7 f5-ns tracked link mid-gray pr2">{{ p.slug }}</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </div>

@@ -10,9 +10,14 @@ import { Page } from '../../models/page.model';
 })
 
 export class NavigationComponent implements OnInit { 
-    pages: Page[];
+    private isMenuExpanded: boolean = false;
+    private pages: Page[];
 
     constructor (private pageService: PageService) { }
+
+    toggle(): void {
+        this.isMenuExpanded = this.isMenuExpanded === true ? false : true;
+    }
 
     ngOnInit () {
         this.pageService.get()

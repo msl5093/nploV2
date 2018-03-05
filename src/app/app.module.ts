@@ -23,6 +23,7 @@ import { ClassesService } from './services/classes.service';
 import { PassesService } from './services/passes.service';
 import { PostsService } from './services/posts.service';
 import { CategoriesService } from './services/categories.service';
+import { ImageService } from './services/image.service';
 
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
@@ -53,7 +54,8 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     ClassesService,
     PassesService,
     PostsService,
-    CategoriesService
+    CategoriesService,
+    ImageService
   ],
   bootstrap: [ AppComponent ]
 })

@@ -1,38 +1,71 @@
-.nav-social p {
-    font-size: .65em;
+a {
+    -webkit-transition: all 0.33333s ease-in-out;
+    -moz-transition: all 0.33333s ease-in-out;
+    -o-transition: all 0.33333s ease-in-out;
+    transition: all 0.33333s ease-in-out;
+}
+
+nav #menu-toggle {
+    background-color: rgb(4, 132, 155);
+    font-size: 2.25em;
+    padding: 20px 10px 20px 10px;
+}
+
+nav #address {
+    font-size: .5em;
+}
+
+#top-nav-container {
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
+    padding-right: 1em;    
+    padding-bottom: .25em;
+}
+
+#main-nav li a:hover,
+#main-nav li a:focus {
+    color: rgb(4, 132, 155);
 }
 
 nav {
     position: fixed;
     top: 0;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);    
+    z-index: 9999;
 }
 
-nav li,
-nav #logo {
+nav li {
     display: inline-block;
+}
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after {
+    background-color: #fff;
 }
 
 nav li {
     text-transform: uppercase;
 }
 
-nav #main-nav li a {
-    font-size: .75rem;
+nav #important-item {
+    padding-bottom: 1.5em;
+}
+
+#social-nav a:hover,
+#social-nav a:focus {
+    color: rgb(4, 132, 155);
+}
+
+.active-link {
+    color: rgb(4, 132, 155);
+    font-weight: 700;
 }
 
 /* Larger than mobile screen */
 @media (min-width: 40.0rem) {  
-    .nav-social p {
+    nav #address {
         font-size: 1em;
     }
 
-    nav {
-        position: fixed;
-        top: 0;
-        box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-    }
-    
     ul,
     li,
     a,
@@ -42,5 +75,9 @@ nav #main-nav li a {
 
     nav #main-nav li a {
         font-size: 1rem;
+    }
+
+    nav #menu-toggle {
+        padding: 8px 15px 13px 15px; 
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
     styleUrls: [ 'header.component.css' ]
 })
 
-export class HeaderComponent { }
+export class HeaderComponent implements OnInit{ 
+    private photoUrls: string[];
+    private url: string;
+
+    constructor () {
+        this.photoUrls = [
+            'nplo2.jpg'
+        ];
+    }
+
+    ngOnInit () {
+        // set random background url
+        this.url = './assets/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
+    }
+}

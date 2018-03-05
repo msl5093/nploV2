@@ -9,6 +9,8 @@ export interface Post {
         rendered: string
     },
     slug: string,
+    imageUrl: string,
     categories: number[],
-    categoryNames: Category[]
+    categoryNames: Category[],
+    postNum: number;
 }

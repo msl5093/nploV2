@@ -1,14 +1,14 @@
-<div class="mw6 w-60-l w-80 center roboto pa2 pt6 mt4">
+<div class="mw6 w-60-l w-80 center raleway pa2 pt4">
     <spinner [showSpinner]="showSpinner"></spinner>
     <ng-container *ngFor="let page of pages">
         <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ page?.title.rendered }}</h2>    
         <div [innerHTML]=" page?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
         </div>
     </ng-container>
-    <div class="pa4 outline">
-        <h2 class="">
+    <div class="pa4 outline shadow-box-black">
+        <h2>
             Have another question and couldn't find your answer here? Let us 
-            <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline">know</a>.
+            <a href="mailto:noplacelikeom.pa@gmail.com?subject=Contact Us" class="no-underline squiggle-line-teal nploTeal">know</a>.
         </h2>
     </div>
 </div>

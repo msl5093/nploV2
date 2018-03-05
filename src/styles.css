@@ -45,9 +45,9 @@ html, body {
       font-family: "Roboto", sans-serif;
   }
   
-  /*.scriptoramaJf {
+  .scriptoramaJf {
     font-family: "ScriptoramaJFHostess";
-  }*/
+  }
   
   @font-face {
     font-family: "ScriptoramaJFHostess";
@@ -70,6 +70,12 @@ html, body {
     background-size: auto 3px;
     background-position: 0 100%;
     background-repeat: repeat-x;
+  }
+
+  .squiggle-line-teal:hover,
+  .squiggle-line-teal:focus {
+    background-image: none;
+    text-decoration: underline;
   }
 
   .tile {

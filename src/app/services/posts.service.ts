@@ -4,12 +4,12 @@ import { Http, RequestOptions, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { Post } from '../models/post.model'
+import { Post } from '../models/post.model';
 import { Category } from '../models/category.model';
 import { environment } from '../../environments/environment';
 
 @Injectable()
-export class PostsService extends DataService<Post> {
+export class PostsService extends DataService<Post> {    
     constructor (protected http: Http) {
         super(http);
         this.apiUrl = `${ environment.wpApiBaseUrl }posts`;
