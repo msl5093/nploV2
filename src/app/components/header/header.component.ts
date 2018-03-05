@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit{
 
     ngOnInit () {
         // set random background url
-        this.url = './assets/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
+        // this.url = './assets/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
+        this.url = 'https://www.noplacelikeom-pa.com/wp-content/uploads/2018/03/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
     }
 }

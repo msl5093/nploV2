@@ -18,7 +18,7 @@
     <spinner [showSpinner]="showSpinner"></spinner>
     <ng-container *ngFor="let post of posts">
         <div class="shadow-box-black blogroll">
-            <img [src]=post.imageUrl [alt]="image" [title]="image" />
+            <img [src]=post.imageUrl [alt]="photo" [title]="photo" />
             <h2 class="f2-ns f3 playfair nploTeal fw7 tracked-tight ma0 ph2">{{ post?.title.rendered }}</h2>
             <p class="f7 mid-gray inconsolata ph2">{{ post?.date | date:'medium'}}</p>
             <div class="f7 mid-gray raleway i ph2">
