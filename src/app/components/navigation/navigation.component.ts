@@ -12,6 +12,7 @@ import { Page } from '../../models/page.model';
 export class NavigationComponent implements OnInit { 
     private isMenuExpanded: boolean = false;
     private pages: Page[];
+    private pageLinks: string[];
 
     constructor (private pageService: PageService) { }
 
@@ -21,6 +22,15 @@ export class NavigationComponent implements OnInit {
 
     ngOnInit () {
         this.pageService.get()
-            .subscribe(data => this.pages = data, error => console.log(error));
+            .subscribe((data) => {
+                this.pages = data;
+                this.pageLinks = this.toLowerCase(this.pages);
+            });
+    }
+
+    private toLowerCase (pages: Page[]): string[] {
+        return pages.map((page) => {
+            return page.title.rendered.toLowerCase();
+        });
     }
 }
