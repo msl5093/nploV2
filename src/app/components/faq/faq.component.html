@@ -1,10 +1,49 @@
 <div class="mw6 w-60-l w-80 center raleway pa2 pt4">
-    <spinner [showSpinner]="showSpinner"></spinner>
-    <ng-container *ngFor="let page of pages">
-        <h2 class="f2-ns f3 playfair pa1 nploTeal fw4">{{ page?.title.rendered }}</h2>    
-        <div [innerHTML]=" page?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy">
-        </div>
-    </ng-container>
+    <div class="f4-ns f5 lh-copy">
+        <h2 class="f2-ns f3 white bg-black">What is you cancellation policy?</h2>
+        <p>
+            Please email or contact us through Facebook if you would like to know if a class is cancelled or otherwise not available. 
+        </p>
+        <p>
+            It’s a safe bet that if there is any type of snow emergency or school closure in the greater Waynesboro area, that classes will be cancelled. This is for your safety as well as ours.
+        </p>
+        <p>
+            There are also times when we need to cancel classes due to family commitments. Please reach out via email, Facebook, or phone and we will get back to you as soon as possible.
+        </p>
+    </div>
+    <div class="f4-ns f5 lh-copy">
+            <h2 class="f2-ns f3 white bg-black">Where are you located?</h2>
+        <p>
+            We are located at 10 E Main Street Waynesboro, PA. Right on the square near Brio coffee.
+        </p>
+    </div>
+    <div class="f4-ns f5 lh-copy">
+            <h2 class="f2-ns f3 white bg-black">What are your hours?</h2>
+        <p>
+            Classes are offered Tuesday and Thursday evenings as well as Saturday mornings. Specialty offerings vary. Check out our schedule page for detailed dates and times.
+        </p>
+    </div>
+    <div class="f4-ns f5 lh-copy">
+        <h2 class="f2-ns f3 white bg-black">How much does a class cost?</h2>
+        <p>
+            Classes are $10 a visit.
+        </p>
+    </div>
+    <div class="f4-ns f5 lh-copy">
+        <h2 class="f2-ns f3 white bg-black">What types of payment do you accept?</h2>
+        <p>
+            Cash, check, and all major credit cards are accepted.
+        </p>
+    </div>
+    <div class="f4-ns f5 lh-copy">
+        <h2 class="f2-ns f3 white bg-black">What types of yoga do you teach?</h2>
+        <p>
+            For a full description of the current class types offered, please see our classes page. Not seeing something you’d like? Tell us about it!
+        </p>
+    </div>
+
+    <br />
+    <br />
     <div class="pa4 outline shadow-box-black">
         <h2>
             Have another question and couldn't find your answer here? Let us 

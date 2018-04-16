@@ -10,15 +10,8 @@ export class HeaderComponent implements OnInit{
     private photoUrls: string[];
     private url: string;
 
-    constructor () {
-        this.photoUrls = [
-            'nplo2.jpg'
-        ];
-    }
-
     ngOnInit () {
-        // set random background url
-        // this.url = './assets/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
-        this.url = 'https://www.noplacelikeom-pa.com/wp-content/uploads/2018/03/' + this.photoUrls[Math.floor(Math.random() * this.photoUrls.length)];
+        //this.url = './assets/nplo2.jpg';
+        this.url = 'https://www.noplacelikeom-pa.com/wp-content/uploads/2018/03/nplo2.jpg';
     }
 }

@@ -13,22 +13,3 @@
         </h2>
     </div>
 </div>
-
-<div class="mw6 w-60-l w-80 center pt4 bg-white">
-    <spinner [showSpinner]="showSpinner"></spinner>
-    <ng-container *ngFor="let post of posts">
-        <div class="shadow-box-black blogroll">
-            <img [src]=post.imageUrl [alt]="photo" [title]="photo" />
-            <h2 class="f2-ns f3 playfair nploTeal fw7 tracked-tight ma0 ph2">{{ post?.title.rendered }}</h2>
-            <p class="f7 mid-gray inconsolata ph2">{{ post?.date | date:'medium'}}</p>
-            <div class="f7 mid-gray raleway i ph2">
-                <ng-container *ngFor="let name of post.categoryNames">
-                    <p class="dib ma0">#{{ name?.name }}</p>
-                </ng-container>
-            </div>
-            <div [innerHTML]="post?.content.rendered | safeHtmlPipe" class="f4-ns f5 lh-copy raleway ph2">
-            </div>
-        </div>
-        <br />
-    </ng-container>
-</div>

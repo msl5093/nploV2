@@ -32,12 +32,18 @@
                 <li>
                     <a routerLink="/welcome" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">Home</a>
                 </li>
-                <!--li *ngFor="let p of pages">
-                    <a *ngIf="p.slug != 'welcome'" routerLink="{{ p.title.rendered }}" routerLinkActive="active-link" id="{{ p.id }}" class="f7 f5-ns tracked link mid-gray pr2">{{ p.title.rendered }}</a>
-                </li-->
-                <li *ngFor="let p of pageLinks">
-                    <a routerLink="{{ p }}" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">{{ p }}</a>
+                <li>
+                    <a routerLink="/faq" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">FAQ</a>
                 </li>
+                <li>
+                    <a routerLink="/classes" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">Classes</a>
+                </li>
+                <li>
+                    <a routerLink="/schedule" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">Schedule</a>
+                </li>
+                <!--li *ngFor="let p of pageLinks">
+                    <a routerLink="{{ p }}" routerLinkActive="active-link" class="f7 f5-ns tracked link mid-gray pr2">{{ p }}</a>
+                </li-->
             </ul>
         </div>
     </nav>
