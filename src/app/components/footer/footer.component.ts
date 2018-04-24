@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PageService } from '../../services/page.service';
-import { Page } from '../../models/page.model';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-footer',
@@ -8,15 +6,6 @@ import { Page } from '../../models/page.model';
     styleUrls: [ 'footer.component.css' ]
 })
 
-export class FooterComponent implements OnInit { 
-    pages: Page[];
-
+export class FooterComponent { 
     year: number = new Date().getFullYear();
-
-    constructor (private pageService: PageService) { }
-
-    ngOnInit () {
-        this.pageService.get()
-            .subscribe(data => this.pages = data, error => console.log(error));
-    }
 }
